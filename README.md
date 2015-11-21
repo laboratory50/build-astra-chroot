@@ -12,7 +12,7 @@
 
  1. mkdir -p myproduct/conf
  2. Параметры репозитория (myproduct/conf/distribution):
-        
+
 	Codename: myproduct
 	Suite: stable
 	Components: main contrib non-free
@@ -22,7 +22,7 @@
 	Description: Супер-изделие типа звезды смерти, только лучше.
 
  3. myproduct/conf/options:
-        
+
 	ask-passphrase
 
  4. reprepro -b myproduct export
