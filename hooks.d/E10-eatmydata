@@ -1,0 +1,7 @@
+#!/bin/sh
+#Enable eatmydata
+
+cat >> /etc/pbuilderrc <<EOF
+export LD_PRELOAD="${LD_PRELOAD:+$LD_PRELOAD:}libeatmydata.so"
+EOF
+

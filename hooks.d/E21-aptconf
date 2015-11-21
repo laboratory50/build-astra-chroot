@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "APT::Install-Recommends \"false\";" >> /etc/apt/apt.conf.d/50sug_req
+echo "APT::Install-Suggests \"false\";" >> /etc/apt/apt.conf.d/50sug_req

@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Usage: ./chook <env> <dest-dir>
+
+if [ ! -f "$1" ]; then
+    echo "Environment file '$1' not found."
+    exit 1
+fi
+
+. "$1"
+
+cat > $2/D10-repos <<EOF
+#!/bin/sh
+rm -f /etc/apt/sources.list.d/env.list
+EOF
+for repo in "${NEEDREPOS[@]}"
+do
+    echo "echo \"$repo\" >> /etc/apt/sources.list.d/env.list" >> $2/D10-repos
+done
+echo "apt-get update" >> $2/D10-repos
+chmod +x $2/D10-repos
+

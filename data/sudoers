@@ -1,0 +1,5 @@
+Cmnd_Alias  PBUILDER = /usr/sbin/pbuilder, /usr/bin/pdebuild, /usr/bin/debuild-pbuilder, /usr/sbin/cowbuilder
+
+Defaults! PBUILDER   setenv
+
+%sudo	ALL=(ALL) NOPASSWD: PBUILDER
